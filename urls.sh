@@ -55,8 +55,7 @@ fi
 
 if [[ "$1" == "ignore" ]]; then
     if [ -d "./.git/" ]; then
-        echo "$FILE" >> ./.git/info/exclude;
-        touch -a $FILE;
+        echo "$FILENAME" >> ./.git/info/exclude;
     else
         echo "Not in a git directory. Did nothing"
     fi

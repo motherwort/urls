@@ -22,20 +22,20 @@ openit(){
 
 dispatch(){
     if [[ -z "$2" ]]; then
-        openit "https://$1";
+        openit "http://$1";
         exit;
     else
         case "$2" in
             "adm" )
-                openit "https://admin.$1";;
+                openit "http://admin.$1";;
             "admin" )
-                openit "https://admin.$1";;
+                openit "http://admin.$1";;
             "api" )
-                openit "https://api.$1/docs";;
+                openit "http://api.$1/docs";;
             "django" )
-                openit "https://api.$1/admin";;
+                openit "http://api.$1/admin";;
             "dj" )
-                openit "https://api.$1/admin";;
+                openit "http://api.$1/admin";;
             * ) 
                 echo "Unknown argument. Use 'admin' ('adm'), 'api' or 'django' ('dj')";;
         esac

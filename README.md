@@ -21,7 +21,7 @@ A simple script for my needs. Allows you to manage project URLs and open them co
 3. Edit `.urls` to add base URLs of your project. Example:
     ```shell
     # URL_KEY=base_url
-    GOOGLE=google.com  # NOT `https://google.com`
+    GOOGLE=google.com  # NOT `http://google.com`
     ```
 
     You can also add base URLs using the `add` command:
@@ -38,21 +38,21 @@ A simple script for my needs. Allows you to manage project URLs and open them co
 5. Run `urls %URL_KEY%` to open the URL with `URL_KEY` key in `.urls`. Example:
     ```shell
     % urls GOOGLE
-    https://google.com
+    http://google.com
     ```
 
-    It will open `https://google.com`.
+    It will open `http://google.com`.
 
 6. Specify modifier argument to modify the base URL. Now there are three modifiers, namely `admin`, `api` and `django`
     ```
     % urls GOOGLE
-    https://google.com
+    http://google.com
     % urls GOOGLE admin
-    https://admin.google.com
+    http://admin.google.com
     % urls GOOGLE api
-    https://api.google.com/docs
+    http://api.google.com/docs
     % urls GOOGLE django
-    https://api.google.com/admin
+    http://api.google.com/admin
     ```
     
     The logic of base URL modification is defined in `dispatch` function of `urls.sh`. You can modify it to meet your needs.
